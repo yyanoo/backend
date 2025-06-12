@@ -12,7 +12,7 @@ const client = new MongoClient(uri, {
   },
 });
 
-export async function getCardData(collectionName) {
+async function getCardData(collectionName) {
   try {
     await client.connect();
     const db = client.db("card");
@@ -26,3 +26,5 @@ export async function getCardData(collectionName) {
     await client.close();
   }
 }
+
+export default getCardData;
