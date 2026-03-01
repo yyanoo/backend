@@ -12,18 +12,14 @@ export async function cards(req, res) {
       lvl: req.query.lvl,
     };
 
-    const hasFilters = Object.values(filters).some(val => val);
-    let result;
-    if (hasFilters) {
-      result = processCardData(data, filters);
-    } else {
-      result = { success: true, data: data, message: "成功" };
-    }
+    let result = processCardData(data, filters);
+
     if (!result.success) {
       return res.status(404).json({ message: result.message });
     }
 
     return res.status(200).json(result.data);
+    
   } catch (err) {
     console.error("取得卡片資料錯誤：", err);
     res.status(500).json({ message: "伺服器錯誤" });
