@@ -3,7 +3,7 @@ import { processCardData } from "../services/cardService.js";
 
 /**
  * 獲取所有卡片（支援過濾和排序）
- * Query 參數: id, title, color, lvl
+ * Body 參數: id, title, color, lvl
  */
 export async function allCard(req, res) {
   try {
@@ -12,10 +12,10 @@ export async function allCard(req, res) {
 
     // 第二步：準備過濾條件
     const filters = {
-      id: req.query.id,
-      title: req.query.title,
-      color: req.query.color,
-      lvl: req.query.lvl,
+      id: req.body.id,
+      title: req.body.title,
+      color: req.body.color,
+      lvl: req.body.lvl,
     };
 
     // 第三步：如果有過濾條件或需要排序，進入 services 進行處理
