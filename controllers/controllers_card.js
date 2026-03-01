@@ -1,4 +1,4 @@
-import { getAndProcessCardData } from "../services/cardService.js";
+import { getAndProcessCardData } from "../services/service_card.js";
 
 /**
  * 獲取所有卡片（支援過濾和排序）
