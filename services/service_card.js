@@ -1,11 +1,5 @@
 import { sortCardData } from "../utils/sortUtils.js";
 
-/**
- * 過濾卡片資料
- * @param {Array} data - 卡片資料陣列
- * @param {Object} filters - 過濾條件 { id, title, color, lvl }
- * @returns {Array} 過濾後的資料
- */
 export function filterCardData(data, filters) {
     let result = data;
 
@@ -28,11 +22,6 @@ export function filterCardData(data, filters) {
     return result;
 }
 
-/**
- * 處理卡片資料（過濾+排序）
- * @param {Array} data - 卡片資料陣列
- * @param {Object} filters - 過濾條件
- */
 export function processCardData(data, filters) {
     try {
         if (!data || data.length === 0) {

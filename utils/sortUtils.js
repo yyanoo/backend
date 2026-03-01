@@ -1,8 +1,4 @@
-/**
- * 排序邏輯：先按 title 排序，再按 id 排序
- * - id 個數字排在前面（升序）
- * - 字母型排在後面（字母順序）
- */
+
 export function sortCardData(result) {
   return result.sort((a, b) => {
     // 先按 title 排序
