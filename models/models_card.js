@@ -6,7 +6,7 @@ import { connectToDatabase } from "../config/mongoConfig.js";
  */
 export async function getAllCardData() {
     try {
-        const db = await connectToDatabase();
+        const db = await connectToDatabase("card"); // 這裡可以指定資料庫名稱，默認為 "card"
 
         // 取得所有 collection 名稱
         const collections = await db.listCollections().toArray();
