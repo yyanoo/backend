@@ -3,6 +3,6 @@ import { allCard } from '../controllers/controllers.js'
 
 const router = express.Router()
 
-router.post('/cards', allCard)
+router.get('/cards', allCard)
 
 export default router
