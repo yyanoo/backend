@@ -15,3 +15,13 @@ app.use(routes);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+async function check_data() {
+  const countms = 24 * 60 * 60 * 1000; // One month in milliseconds
+  while (true) {
+    await new Promise(resolve => setTimeout(resolve, countms));
+    console.log("Checking data...");
+  }
+}
+
+check_data();
